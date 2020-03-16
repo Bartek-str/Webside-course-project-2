@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color:white;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    margin: 10px auto;
+    width: 80%;
+    max-width: 1960px;
+    min-width: 430px;
+    /* border: 1px solid red; */
+}
+
+.menu > li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu li:hover {
+    text-decoration: underline;
+}
+
+.menu li:first-child {
+    margin-left: 0;
+}
+
+.menu a {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.header {
+    background-color: black;
+    width: 100%;
+    height: calc(100vh - (3em + 40px));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: url("../images/5b0bcaeb5180f.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.header h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.header::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.firstSection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.firstSectionImg {
+    margin: 10px 5px 10px 0;
+    overflow: hidden;
+    height: 300px;
+    width: 250px;
+    flex-grow: 1;
+}
+
+.firstSectionImg img{
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease-out;
+    transform: scale(1);
+}
+
+.firstSectionImg img:hover{
+    transform: scale(1.5) rotate(20deg);
+}
+
+.firstSection article{
+    width: 45%;
+    flex-grow: 1;
+    min-width: 400px;
+}
+
+.firstSection article h1{
+    margin-top: 1em;
+    margin-left: 0.5em;
+    font-size: 30px;
+}
+
+.firstSection article h2{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 2em;
+    font-size: 12.7px;
+    font-weight: lighter;
+}
+
+.secondContainer {
+    padding: 10px 0;
+    background-color: black;
+    background-image: url("../images/cosmos-1845140_960_720.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.secondContainer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.secondContainer .container > div {
+    width: 30%;
+    height: 200px;
+    background-color: white;
+    margin: 10px;
+    min-width: 200px;
+    flex-grow: 1;
+    position: relative;
+    opacity: 0.9;
+    background-image: url("../images/Jaguar_I-PACE_S_Indus-Silver_065.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.add1,
+.add2,
+.add3 {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+}
+
+.secondContainerPhoto:hover .add1,
+.secondContainerPhoto:hover .add2,
+.secondContainerPhoto:hover .add3 {
+    height: 50px;
+    opacity: 0.7;
+    transition: all 0.7s ease-out;
+}
+
+.secondContainerPhoto::before {
+    content: "";
+    background-color: white;
+    background-image: url("../images/book.svg");
+    background-size: auto 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+footer::before,
+footer::after {
+    content: "Bartłomiej Strużyk";
+    color: white;
+    font-size: 8px;
+    background-color: #52364A;
+    height: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
